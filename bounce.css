@@ -1,11 +1,93 @@
 /* Bounce.CSS */
 
+
 div.ball{
-	background-color: red;
+
+	opacity: 0;
+
+	/* Shape */
 	border-radius: 100px;
 	height: 100px;
-	left: 300px;
-	position: absolute;
-	top: 300px;
 	width: 100px;
+
+	/* Coloring */
+	/*background-color: red;*/
+	background: -webkit-radial-gradient(30px 30px, 60px 60px, #F00, #900);
+	border: 1px solid #600;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+
+	/* Position */
+	position: absolute;
+
+}
+
+div.ball:nth-child(4n+0){
+	-webkit-animation: bounce 8s 0 infinite linear;	
+}
+div.ball:nth-child(4n+1){
+	-webkit-animation: bounce 9s 2s infinite linear;	
+}
+div.ball:nth-child(4n+2){
+	-webkit-animation: bounce 5s 3s infinite linear;	
+}
+div.ball:nth-child(4n+3){
+	-webkit-animation: bounce 12s 6s infinite linear;	
+}
+
+/* Set inner dot */
+div.ball:before{
+
+	content: ' ';
+
+	/* Shape */
+	/*background-color: pink;*/
+	background: -webkit-linear-gradient(top, pink, rgba(255,255,255,0));
+	background: -webkit-radial-gradient( 0 0, 20px 20px, pink, rgba(255,255,255,0));
+	display: border-box;
+	border-radius: 20px;
+	height: 20px;
+	width: 20px;
+
+
+	/* Position */
+	position: absolute;
+	left: 20px;
+	top: 20px;	
+
+}
+
+@-webkit-keyframes bounce{
+
+	0%{
+		opacity: 1;
+		left: 80%;
+		bottom: 80%;
+	}
+
+	25%{
+		opacity: 1;
+		left: 50%;
+		bottom: 0;
+	}
+	50%{
+		opacity: 1;
+		left: 25%;
+		bottom: 80%;
+	}
+	62%{
+		opacity: 1;
+		left: 0;
+		bottom: 40%;
+	}
+	75%{
+		opacity: 1;
+		left: 25%;
+		bottom: 0;
+	}
+	100%{
+		opacity: 1;
+		left: 80%;
+		bottom: 80%;
+	}
+
 }
