@@ -1,8 +1,16 @@
-/* Bounce.CSS */
+/**
+ * Bounce.CSS 
+ * Authored by Ryhan Hassan
+ * 
+ * Describes appearance of <div class="ball"></div>,
+ * and a bounce animation keyframe.
+ * 
+ **/
 
-
+/* Define what a ball looks like */
 div.ball{
 
+	/* Hides the ball element until ready to be shown */
 	opacity: 0;
 
 	/* Shape */
@@ -11,7 +19,6 @@ div.ball{
 	width: 100px;
 
 	/* Coloring */
-	/*background-color: red;*/
 	background: -webkit-radial-gradient(30px 30px, 60px 60px, #F00, #900);
 	border: 1px solid #600;
 	box-shadow: 0 3px 10px rgba(0,0,0,0.25);
@@ -21,20 +28,7 @@ div.ball{
 
 }
 
-div.ball:nth-child(4n+0){
-	-webkit-animation: bounce 8s 0 infinite linear;	
-}
-div.ball:nth-child(4n+1){
-	-webkit-animation: bounce 9s 2s infinite linear;	
-}
-div.ball:nth-child(4n+2){
-	-webkit-animation: bounce 5s 3s infinite linear;	
-}
-div.ball:nth-child(4n+3){
-	-webkit-animation: bounce 12s 6s infinite linear;	
-}
-
-/* Set inner dot */
+/* Add a light inner gloss to balls */
 div.ball:before{
 
 	content: ' ';
@@ -56,6 +50,7 @@ div.ball:before{
 
 }
 
+/* Define a sequence of keyframes */
 @-webkit-keyframes bounce{
 
 	0%{
@@ -90,4 +85,22 @@ div.ball:before{
 		bottom: 80%;
 	}
 
+}
+
+/* 
+ * Animate our ball elements.
+ * If we have multiple balls, stagger
+ * them so they don't always overlap.
+ */
+div.ball:nth-child(4n+0){
+	-webkit-animation: bounce 4s 0 infinite linear;	
+}
+div.ball:nth-child(4n+1){
+	-webkit-animation: bounce 9s 2s infinite linear;	
+}
+div.ball:nth-child(4n+2){
+	-webkit-animation: bounce 5s 3s infinite linear;	
+}
+div.ball:nth-child(4n+3){
+	-webkit-animation: bounce 12s 6s infinite linear;	
 }
