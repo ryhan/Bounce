@@ -1,0 +1,11 @@
+/* Bounce.CSS */
+
+div.ball{
+	background-color: red;
+	border-radius: 100px;
+	height: 100px;
+	left: 300px;
+	position: absolute;
+	top: 300px;
+	width: 100px;
+}
