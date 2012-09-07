@@ -34,14 +34,12 @@ div.ball:before{
 	content: ' ';
 
 	/* Shape */
-	/*background-color: pink;*/
 	background: -webkit-linear-gradient(top, pink, rgba(255,255,255,0));
 	background: -webkit-radial-gradient( 0 0, 20px 20px, pink, rgba(255,255,255,0));
 	display: border-box;
 	border-radius: 20px;
 	height: 20px;
 	width: 20px;
-
 
 	/* Position */
 	position: absolute;
